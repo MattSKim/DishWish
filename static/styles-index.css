@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+:root{
+    --primary-cream-hsl: 30, 38%, 92%;
+
+    --primary-cream: hsl(var(--primary-cream-hsl));
+
+    --fs-1: 1rem;
+    --fs-2: 1.25rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1.75rem;
+    --fs-5: 2rem;
+    --fs-6: 2.25rem;
+    --fs-7: 3rem;
+    --fs-8: 5rem;
+
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --font-family: 'Sniglet', sans-serif;
+    
+}
+
+body{
+    background-image: url('../static/images/background.png');
+    background-size: cover;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    border-radius: 2rem;
+    background-color: var(--primary-cream);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.title{
+    text-align: center;
+    font-size: var(--fs-6);
+    font-weight: var(--fw-bold);
+}
+
+.description{
+    text-align: center;
+}
+
+.form-group{
+    text-align: center;
+}
+
+#submit-button{
+    background-color: rgb(88, 190, 88);
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#submit-button:hover{
+    background-color: rgb(188, 240, 188);
+    color: black;
+}
+
+.question{
+    font-weight: var(--fw-bold);
+}
+
+.text-box{
+    border-radius: 1rem;
+    border: 1.5px solid black;
+    padding: 7px;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+#ingredients-box{
+    resize: vertical;
+    width: 80%;
+}
+
+#allergy-box{
+    resize: vertical;
+    width: 50%;
+}
+
+.hidden-radio {
+    display: none;
+}
+
+.radio-btn {
+    display: inline-block;
+    background-color: whitesmoke;
+    border: 1.5px solid black;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 2rem;
+}
+
+.hidden-radio:checked + .radio-btn {
+    background-color: rgb(188, 240, 188);
+    color: black;
+}

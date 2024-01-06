@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Wish</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles-result.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div id="dish">
+                <h1 class="dish-title">
+                    <pre>{{ dish }}</pre>
+                </h1>
+            </div>
+            <div id="servings-time">
+                <div class="flex">
+                    <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+                        <image x="0" y="0" width="25" height="25" xlink:href="/static/images/utensils-icon.png" />
+                    </svg>
+                    <h2 class="servings-title">{{ serving_size }} servings</h2>
+                </div>
+    
+                <div class="flex">
+                    <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+                        <image x="0" y="0" width="25" height="25" xlink:href="/static/images/clock-icon.png" />
+                    </svg>
+                    <h2 class="cooktime-title">{{cook_time}}</h2>
+                </div>
+            </div>
+            <div id="ingredients" class="grid-flow" data-spacing="small">
+                <h2 class="section-title">Ingredients</h2>
+                <p>
+                    <pre>{{ ingredients }}</pre>
+                </p>
+            </div>
+            <div id="notes" class="grid-flow" data-spacing="small">
+                <h2 class="section-title">Notes</h2>
+                <p>
+                    <pre>{{ notes }}</pre>
+                </p>
+            </div>
+            <div id="instructions" class="grid-flow" data-spacing="small">
+                <h2 class="section-title">Directions</h2>
+                <p>
+                    <pre>{{ instructions }}</pre>
+                </p>
+            </div>
+            <div id="dish-image">
+                <img src="{{ dynamic_image_url }}" alt="{{ dish }}">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

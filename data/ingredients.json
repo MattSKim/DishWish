@@ -1,0 +1,122 @@
+[
+    {
+        "id": "1",
+        "name": "Onion",
+        "group": "Vegetables",
+        "emoji": "🧅"
+    },
+    {
+        "id": "2",
+        "name": "Potato",
+        "group": "Vegetables",
+        "emoji": "🥔"
+    },
+    {
+        "id": "3",
+        "name": "Carrot",
+        "group": "Vegetables",
+        "emoji": "🥕"
+    },
+    {
+        "id": "4",
+        "name": "Tomato",
+        "group": "Vegetables",
+        "emoji": "🍅"
+    },
+    {
+        "id": "5",
+        "name": "Garlic",
+        "group": "Vegetables",
+        "emoji": "🧄"
+    },
+    {
+        "id": "6",
+        "name": "Lettuce",
+        "group": "Vegetables",
+        "emoji": "🥬"
+    },
+    {
+        "id": "7",
+        "name": "Broccoli",
+        "group": "Vegetables",
+        "emoji": "🥦"
+    },
+    {
+        "id": "8",
+        "name": "Bell Pepper",
+        "group": "Vegetables",
+        "emoji": "🫑"
+    },
+    {
+        "id": "9",
+        "name": "Chicken",
+        "group": "Protein",
+        "emoji": "🍗"
+    },
+    {
+        "id": "10",
+        "name": "Beef",
+        "group": "Protein",
+        "emoji": "🥩"
+    },
+    {
+        "id": "11",
+        "name": "Fish",
+        "group": "Protein",
+        "emoji": "🐟"
+    },
+    {
+        "id": "12",
+        "name": "Pork",
+        "group": "Protein",
+        "emoji": "🐖"
+    },
+    {
+        "id": "13",
+        "name": "Bread",
+        "group": "Grains",
+        "emoji": "🍞"
+    },
+    {
+        "id": "14",
+        "name": "Pasta",
+        "group": "Grains",
+        "emoji": "🍝"
+    },
+    {
+        "id": "15",
+        "name": "Rice",
+        "group": "Grains",
+        "emoji": "🍚"
+    },
+    {
+        "id": "16",
+        "name": "Lemon",
+        "group": "Fruits",
+        "emoji": "🍋"
+    },
+    {
+        "id": "17",
+        "name": "Lime",
+        "group": "Fruits",
+        "emoji": "🍈"
+    },
+    {
+        "id": "18",
+        "name": "Apple",
+        "group": "Fruits",
+        "emoji": "🍎"
+    },
+    {
+        "id": "19",
+        "name": "Banana",
+        "group": "Fruits",
+        "emoji": "🍌"
+    },
+    {
+        "id": "20",
+        "name": "Strawberry",
+        "group": "Fruits",
+        "emoji": "🍓"
+    }
+]

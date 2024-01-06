@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Wish</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles-index.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form method="post">
+                <h1 class="title">Dish Wish</h1>
+                <p class="description">Welcome! Wish for a Dish by answering the following questions.<br>Our innovative AI-powered application will generate personalized recipes<br>tailored to your needs and available ingredients!</p>
+                <br>
+                <div class="form-group grid-flow">
+                    <div class="question">What is your diet?</div>
+                        <input type="radio" name="diet" value="normal" id="normal" class="hidden-radio">
+                        <label for="normal" class="radio-btn">Normal</label>
+                        <input type="radio" name="diet" value="vegetarian" id="vegetarian" class="hidden-radio"> 
+                        <label for="vegetarian" class="radio-btn">Vegetarian</label>
+                        <input type="radio" name="diet" value="vegan" id="vegan" class="hidden-radio"> 
+                        <label for="vegan" class="radio-btn">Vegan</label>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="form-group grid-flow">
+                    <div class="question">What is your cooking level?</div>
+                        <input type="radio" name="recipe_level" value="beginner" id="beginner" class="hidden-radio">
+                        <label for="beginner" class="radio-btn">Beginner</label>
+                        <input type="radio" name="recipe_level" value="intermediate" id="intermediate" class="hidden-radio"> 
+                        <label for="intermediate" class="radio-btn">Intermediate</label>
+                        <input type="radio" name="recipe_level" value="advanced" id="advanced" class="hidden-radio"> 
+                        <label for="advanced" class="radio-btn">Advanced</label>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="form-group grid-flow">
+                    <div class="question">How much time do you have to cook?</div>
+                        <input type="radio" name="cook_time" value="15 mins" id="15mins" class="hidden-radio">
+                        <label for="15mins" class="radio-btn">15 minutes</label>
+                        <input type="radio" name="cook_time" value="30 mins" id="30mins" class="hidden-radio"> 
+                        <label for="30mins" class="radio-btn">30 minutes</label>
+                        <input type="radio" name="cook_time" value="1 hour" id="1hr" class="hidden-radio"> 
+                        <label for="1hr" class="radio-btn">1 hour</label>
+                        <input type="radio" name="cook_time" value="Over 1 hour" id="over1hr" class="hidden-radio">
+                        <label for="over1hr" class="radio-btn">Over 1 hour</label>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="form-group grid-flow">
+                    <div class="question">What type of cuisine do you want to cook? </div>
+                    <label for="cuisine"></label>
+                        <input id="cuisine-box" class="text-box" type="text" name="cuisine" autocomplete="off" required>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="form-group grid-flow">
+                    <div class="question">How many people do you want to serve?</div>
+                    <label for="serving_size"></label>
+                        <input id="servings-box" class="text-box" type="text" name="serving_size" autocomplete="off" required>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="form-group grid-flow">
+                    <div class="question">What ingredients do you have? Separate each ingredient with a comma.</div>
+                    <label for="ingredients"></label>
+                        <textarea id="ingredients-box" class="text-box" type="text" name="ingredients" autocomplete="off" required></textarea>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="form-group grid-flow">
+                    <div class="question">List any allergies, otherwise leave blank.</div>
+                    <label for="allergies"></label>
+                        <textarea id="allergy-box" class="text-box" type="text" name="allergies" autocomplete="off"></textarea>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="form-group grid-flow">
+                    <input type="submit" value="Make Your Wish!" id="submit-button">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

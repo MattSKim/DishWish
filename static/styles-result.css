@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+:root{
+    --main-padding: 0.5rem;
+    --main-padding2: 2.5rem;
+
+    --primary-cream-hsl: 30, 38%, 92%;
+
+    --primary-cream: hsl(var(--primary-cream-hsl));
+
+    --neutral-dark-blue-hsl: 212, 21%, 14%;
+    --neutral-dark-gray-hsl: 228, 12%, 48%;
+    --neutral-white-hsl: 0, 0%, 100%;
+
+    --neutral-dark-blue: hsl(var(--neutral-dark-blue-hsl));
+    --neutral-dark-gray: hsl(var(--neutral-dark-gray-hsl));
+    --neutral-white: hsl(var(--neutral-white-hsl));
+
+    --fs-1: 1rem;
+    --fs-2: 1.25rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1.75rem;
+    --fs-5: 2rem;
+    --fs-6: 2.25rem;
+    --fs-7: 3rem;
+    --fs-8: 5rem;
+
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --font-family: 'Sniglet', sans-serif;
+}
+
+body {
+    background: tan;
+    height: 100vh;
+    font-family: var(--font-family);
+    font-weight: var(--fw-normal);
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+        "dish-image dish dish"
+        "dish-image servings-time servings-time"
+        "dish-image ingredients instructions"
+        "dish-image notes instructions";
+    grid-gap: 0.25rem;
+    margin: 3rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: var(--primary-cream);
+    justify-content: center;
+    align-content: center;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+#dish{
+    grid-area: dish;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+#servings-time{
+    grid-area: servings-time;
+    padding: var(--main-padding);
+    border-bottom: 2px solid black;
+    margin: 0rem 1.5rem 0rem 1rem;
+}
+
+#ingredients{
+    grid-area: ingredients;
+    padding: var(--main-padding);
+}
+
+#notes{
+    grid-area: notes;
+    padding: var(--main-padding) var(--main-padding) var(--main-padding2) var(--main-padding);
+}
+
+#ingredients, #notes{
+    margin: 0rem 0rem 0rem 1rem;
+}
+
+#instructions{
+    grid-area: instructions;
+    padding: var(--main-padding) var(--main-padding2) var(--main-padding2) var(--main-padding);
+}
+
+#dish-image{
+    grid-area: dish-image;
+    padding: var(--main-padding);
+}
+
+@media (max-width: 600px){
+    .container{
+        grid-template-areas: 
+            "dish-image"
+            "dish"
+            "servings-time"
+            "ingredients"
+            "instructions"
+            "notes";
+        align-content: center;
+        margin: 0rem;
+        border-radius: 0rem;
+    }
+
+    #instructions{
+        padding: 1.5rem;
+    }
+
+
+}
+
+pre{
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+#ingredients pre, #notes pre, #instructions pre{
+    color: var(--neutral-dark-gray);
+}
+
+.section-title, .dish-title {
+    color: var(--neutral-dark-blue);
+}
+
+.section-title{
+    text-align: left;
+    font-size: var(--fs-3);
+    font-weight: var(--fw-bold);
+}
+
+.servings-title, .cooktime-title{
+    font-size: var(--fs-2);
+    font-weight: var(--fw-bold);
+}
+
+.dish-title{
+    text-align: center;
+    font-size: var(--fs-6);
+    font-weight: var(--fw-bold);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#servings-time{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.grid-flow{
+    display: grid;
+    align-content: start;
+}
+
+.grid-flow[data-spacing="large"]{
+    gap: 2rem;
+}
+
+.grid-flow[data-spacing="small"]{
+    gap: 0.25rem;
+}
+
+#dish-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#dish-image{
+    position: relative;
+    padding: 0;
+}
