@@ -108,7 +108,7 @@ body {
     padding: var(--main-padding);
 }
 
-@media (max-width: 600px){
+@media (max-width: 900px){
     .container{
         grid-template-areas: 
             "dish-image"
@@ -125,8 +125,6 @@ body {
     #instructions{
         padding: 1.5rem;
     }
-
-
 }
 
 pre{
