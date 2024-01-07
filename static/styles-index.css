@@ -136,3 +136,7 @@ body{
     background-color: rgb(188, 240, 188);
     color: black;
 }
+
+input::placeholder, textarea::placeholder{
+    font-size: 14px;
+}

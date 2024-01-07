@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matthew S. Kim & Ethan S. Kim">
-    <meta property="og:title" content="DishWish: AI Recipe Generator" /> 
+    <meta property="og:title" content="DishWish AI Recipe Generator" /> 
     <meta property="og:type" content="website" />
     <meta property="or:url" content="http://dish-wish.com" />
-    <meta property="og:image" content="http://dish-wish.com/static/images/background.png" />
+    <meta property="og:image" content="http://dish-wish.com/static/images/iMessagePreviewPicture.png" />
     <title>Dish Wish</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles-index.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet">
@@ -22,11 +22,13 @@
                 <div class="form-group grid-flow">
                     <div class="question">What is your diet?</div>
                         <input type="radio" name="diet" value="normal" id="normal" class="hidden-radio">
-                        <label for="normal" class="radio-btn">Normal</label>
+                        <label for="normal" class="radio-btn">No restrictions</label>
                         <input type="radio" name="diet" value="vegetarian" id="vegetarian" class="hidden-radio"> 
                         <label for="vegetarian" class="radio-btn">Vegetarian</label>
                         <input type="radio" name="diet" value="vegan" id="vegan" class="hidden-radio"> 
                         <label for="vegan" class="radio-btn">Vegan</label>
+                        <input type="radio" name="diet" value="pescatarian" id="pescatarian" class="hidden-radio">
+                        <label for="pescatarian" class="radio-btn">Pescatarian</label>
                     <br>
                     <br>
                 </div>
@@ -60,7 +62,7 @@
                 <div class="form-group grid-flow">
                     <div class="question">What type of cuisine do you want to cook? </div>
                     <label for="cuisine"></label>
-                        <input id="cuisine-box" class="text-box" type="text" name="cuisine" autocomplete="off" required>
+                        <input id="cuisine-box" class="text-box" type="text" name="cuisine" placeholder="e.g. American, Italian" autocomplete="off" required>
                     <br>
                     <br>
                 </div>
@@ -68,7 +70,7 @@
                 <div class="form-group grid-flow">
                     <div class="question">How many people do you want to serve?</div>
                     <label for="serving_size"></label>
-                        <input id="servings-box" class="text-box" type="text" name="serving_size" autocomplete="off" required>
+                        <input id="servings-box" class="text-box" type="text" name="serving_size" placeholder="e.g. 1, 2, 3" autocomplete="off" required>
                     <br>
                     <br>
                 </div>
@@ -76,7 +78,7 @@
                 <div class="form-group grid-flow">
                     <div class="question">What ingredients do you have? Separate each ingredient with a comma.</div>
                     <label for="ingredients"></label>
-                        <textarea id="ingredients-box" class="text-box" type="text" name="ingredients" autocomplete="off" required></textarea>
+                        <textarea id="ingredients-box" class="text-box" type="text" name="ingredients" placeholder="e.g. carrots, onions, potatoes, rice, chicken" autocomplete="off" required></textarea>
                     <br>
                     <br>
                 </div>
@@ -84,7 +86,7 @@
                 <div class="form-group grid-flow">
                     <div class="question">List any allergies, otherwise leave blank.</div>
                     <label for="allergies"></label>
-                        <textarea id="allergy-box" class="text-box" type="text" name="allergies" autocomplete="off"></textarea>
+                        <textarea id="allergy-box" class="text-box" type="text" name="allergies" placeholder="e.g. peanuts, eggs, shellfish" autocomplete="off"></textarea>
                     <br>
                     <br>
                 </div>
